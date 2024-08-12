@@ -11,11 +11,13 @@ namespace Strings_and_Integers
 
             List<int> listOfIntegers = new List<int>() { 20, 40, 60, 80 };
             Console.WriteLine("Here is a list of integers: 20, 40, 60, 80. \nSelect a number to divide every number on the list");
-            int selectedInteger = Convert.ToInt32(Console.ReadLine());
 
+            
             //try catch block
-            try
-            { //loop
+            try 
+                
+            { //loop and user input
+                int selectedInteger = Convert.ToInt32(Console.ReadLine());
                 for (int i = 0; i < listOfIntegers.Count; i++)
                 {
                     Console.WriteLine(listOfIntegers[i] / selectedInteger);
@@ -33,6 +35,10 @@ namespace Strings_and_Integers
             }
             //general expection
             catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
             {
                 Console.WriteLine(ex.Message);
             }
